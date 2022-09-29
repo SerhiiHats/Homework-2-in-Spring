@@ -1,0 +1,18 @@
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<bean id="mpi20" class="models.Impl.Engine20MPIImpl">
+    <constructor-arg index="0" value="NU PE 2.0 MPI"/>
+    <constructor-arg index="1" value="1999"/>
+    <constructor-arg index="2" value="151"/>
+</bean>
+
+ <bean id="tucson" class="models.Impl.CarHyundaiTucsonIml" init-method="init">
+        <constructor-arg ref="mpi20"/>
+     <property name="model" value="Tucson"/>
+     <property name="cena" value="25500"/>
+    </bean>
+
+</beans>
